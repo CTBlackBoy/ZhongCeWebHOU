@@ -12,12 +12,6 @@ db = SQLAlchemy(app)
 app.config.from_object(config)
 # db.init_app(app)
 
-# app.run(
-#     host='192.168.1.1',
-#     port=8888,
-#     debug=True,
-# )
-
 
 @app.route('/')
 def hello_world():
@@ -203,5 +197,5 @@ def AdminTestin():
 
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    db.create_all()
+    app.run(host='10.10.10.1',port=200)
