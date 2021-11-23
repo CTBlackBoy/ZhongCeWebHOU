@@ -1,7 +1,7 @@
 
 
 USERNAME = 'root'
-PASSWORD = ''
+PASSWORD = '123456'
 HOST = 'localhost'
 PORT = '3306'
 DATABASE = 'zhongce'

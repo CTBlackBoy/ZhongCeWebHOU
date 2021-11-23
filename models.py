@@ -42,13 +42,21 @@ class ArticleMessage(db.Model):
     agree = db.Column(db.Integer,default=0)
     talk = db.Column(db.Integer, default=0)
     read = db.Column(db.Integer, default=0)
+    UUID = db.Column(db.String(30))
 
 class TestinMessage(db.Model):
     __tablename__ = 'TestinMessage'
     id = db.Column(db.Integer,primary_key = True,autoincrement = True)
     auther = db.Column(db.String(20),nullable = False)
-    title = db.Column(db.String(100),nullable = False)
-    content = db.Column(db.String(100), nullable=False)
+    title = db.Column(db.String(20),nullable = False)
+    content = db.Column(db.String(255), nullable=False)
     time = db.Column(db.DateTime,nullable = False)
     image = db.Column(db.String(100),nullable = False)
+class UserInformation(db.Model):
+    __tablename__ = 'UserInformation'
+    id = db.Column(db.Integer,primary_key = True,autoincrement = True)
+    auther = db.Column(db.String(20),nullable = False)
+    email = db.Column(db.String(20),nullable = False)
+    password = db.Column(db.String(20),nullable = False)
+
 
